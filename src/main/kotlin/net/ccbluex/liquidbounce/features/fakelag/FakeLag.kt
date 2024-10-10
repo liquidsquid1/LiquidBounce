@@ -34,6 +34,7 @@ import net.ccbluex.liquidbounce.features.module.modules.movement.autododge.Modul
 import net.ccbluex.liquidbounce.features.module.modules.movement.fly.modes.specific.FlyNcpClip
 import net.ccbluex.liquidbounce.features.module.modules.movement.fly.modes.verus.FlyVerusB3869Flat
 import net.ccbluex.liquidbounce.features.module.modules.movement.noslow.modes.blocking.NoSlowBlockingBlink
+import net.ccbluex.liquidbounce.features.module.modules.movement.speed.modes.blocksmc.SpeedBlocksMCLowHop
 import net.ccbluex.liquidbounce.features.module.modules.player.ModuleAntiVoid
 import net.ccbluex.liquidbounce.features.module.modules.player.ModuleBlink
 import net.ccbluex.liquidbounce.features.module.modules.player.nofall.modes.NoFallBlink
@@ -95,7 +96,7 @@ object FakeLag : Listenable {
         if (ModuleBlink.enabled || ModuleAntiVoid.needsArtificialLag || ModuleFakeLag.shouldLag(packet)
             || NoFallBlink.shouldLag() || ModuleInventoryMove.Blink.shouldLag() || ModuleClickTp.requiresLag
             || FlyNcpClip.shouldLag || VelocityWatchdog.shouldLag
-            || ScaffoldBlinkFeature.shouldBlink || FlyVerusB3869Flat.requiresLag) {
+            || ScaffoldBlinkFeature.shouldBlink || FlyVerusB3869Flat.requiresLag || SpeedBlocksMCLowHop.shouldLag) {
             return LagResult.QUEUE
         }
 
