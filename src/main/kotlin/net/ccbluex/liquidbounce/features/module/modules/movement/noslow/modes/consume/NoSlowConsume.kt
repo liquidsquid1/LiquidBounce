@@ -21,9 +21,11 @@ package net.ccbluex.liquidbounce.features.module.modules.movement.noslow.modes.c
 import net.ccbluex.liquidbounce.config.types.Choice
 import net.ccbluex.liquidbounce.config.types.NoneChoice
 import net.ccbluex.liquidbounce.features.module.modules.movement.noslow.NoSlowUseActionHandler
+import net.ccbluex.liquidbounce.features.module.modules.movement.noslow.modes.shared.*
 import net.ccbluex.liquidbounce.features.module.modules.movement.noslow.modes.shared.NoSlowNoBlockInteract
 import net.ccbluex.liquidbounce.features.module.modules.movement.noslow.modes.shared.NoSlowSharedGrim2360
 import net.ccbluex.liquidbounce.features.module.modules.movement.noslow.modes.shared.NoSlowSharedGrim2364MC18
+import net.ccbluex.liquidbounce.features.module.modules.movement.noslow.modes.shared.NoSlowSharedHover
 import net.ccbluex.liquidbounce.features.module.modules.movement.noslow.modes.shared.NoSlowSharedInvalidHand
 import net.ccbluex.liquidbounce.utils.client.inGame
 import net.ccbluex.liquidbounce.utils.item.isConsumable
@@ -43,6 +45,7 @@ object NoSlowConsume : NoSlowUseActionHandler("Consume") {
             NoSlowSharedGrim2360(it),
             NoSlowSharedGrim2364MC18(it),
             NoSlowSharedInvalidHand(it),
+            NoSlowSharedHover(it),
             NoSlowConsumeIntave14(it),
             NoSlowConsumeRelease(it)
         )
